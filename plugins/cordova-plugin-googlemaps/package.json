@@ -1,0 +1,112 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-googlemaps",
+        "scope": null,
+        "escapedName": "cordova-plugin-googlemaps",
+        "name": "cordova-plugin-googlemaps",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/apurvabajpai/Desktop/mycode/node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-googlemaps@latest",
+  "_id": "cordova-plugin-googlemaps@1.4.5",
+  "_inCache": true,
+  "_location": "/cordova-plugin-googlemaps",
+  "_nodeVersion": "5.4.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-googlemaps-1.4.5.tgz_1503073120996_0.8382692423183471"
+  },
+  "_npmUser": {
+    "name": "wf9a5m75",
+    "email": "wf9a5m75@gmail.com"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-googlemaps",
+    "scope": null,
+    "escapedName": "cordova-plugin-googlemaps",
+    "name": "cordova-plugin-googlemaps",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-googlemaps/-/cordova-plugin-googlemaps-1.4.5.tgz",
+  "_shasum": "fa9ea3e29d39492ecf80d2c3811e40e0bc7e4b78",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-googlemaps",
+  "_where": "/Users/apurvabajpai/Desktop/mycode/node_modules",
+  "author": {
+    "name": "Masashi Katsumata, Hirbod Mirjavadi"
+  },
+  "bugs": {
+    "url": "https://github.com/mapsplugin/cordova-plugin-googlemaps/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-googlemaps",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Google Maps native SDK for Android and iOS",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "fa9ea3e29d39492ecf80d2c3811e40e0bc7e4b78",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-googlemaps/-/cordova-plugin-googlemaps-1.4.5.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=5.1.0"
+    },
+    {
+      "name": "cordova-ios",
+      "version": ">=4.0.0"
+    }
+  ],
+  "gitHead": "cae8126343e6bd9e08b7f88d36d757e9faa86774",
+  "homepage": "https://github.com/mapsplugin/cordova-plugin-googlemaps#readme",
+  "keywords": [
+    "google",
+    "maps",
+    "geo",
+    "google maps",
+    "nightstomp",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "Apache 2.0",
+  "maintainers": [
+    {
+      "name": "nightstomp",
+      "email": "info@nightstomp.com"
+    },
+    {
+      "name": "wf9a5m75",
+      "email": "wf9a5m75@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-googlemaps",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps.git"
+  },
+  "scripts": {},
+  "version": "1.4.5"
+}

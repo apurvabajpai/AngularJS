@@ -1,0 +1,21 @@
+<ion-view view-title="selectedIdrData">
+  <ion-header-bar>
+
+   <button ng-click="close()">Close</button>
+</ion-header-bar>
+<ion-content align="center">
+<div class="form">
+	<div class="row">
+  </div>
+
+<!-- <div  ng-if="array.length!=0" class="lstdata">  -->
+         <p>First Name : {{selectedId.frstnm}}</p>
+         <p>Last Name : {{selectedId.lstnm}}</p>
+         <p>Email : {{selectedId.email}}</p>
+         <p>Contact : {{selectedId.cntct}}</p>
+         <p>Selected Country : {{selectedId.selectedCountry.name}}</p>
+         <p>Selected State : {{selectedId.selectedState.name}}</p>
+         <p>Address : {{selectedId.address}}</p>
+</div>
+</ion-content>
+</ion-view>

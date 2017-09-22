@@ -1,0 +1,114 @@
+
+<ion-view >
+<ion-content>
+<h1 align="center">Sign up </h1>
+
+    <form ng-submit="dosignup()" name="frm">
+      <div class="list">
+
+        <div>
+          <img id='myImage' height='150px' width='150px'>
+         </div> 
+        <label class="item">
+          <button ion-button class="button button-block button-positive"  ng-click="showActionsheet()" type="submit" >Upload Image</button>
+        </label>
+        
+      
+         
+          <label class="item item-input">
+          <span class="input-label">First name</span>
+          <input type="text" name="frstnm" id="fnm" placeholder="enter Firstname" ng-pattern="/^[a-zA-Z]+$/" ng-model="user.frstnm" required>
+           <span style="color: red" ng-if="frm.frstnm.$dirty && frm.frstnm.$error.pattern">Invalid Username</span>
+           <span style="color: red" ng-if="frm.frstnm.$dirty && frm.frstnm.$error.required">Don't Leave Empty</span>
+           </label>
+
+
+
+
+
+
+
+          <label class="item item-input">
+          <span class="input-label">Last name</span>
+          <input type="text" name="lstnm" id="lnm" placeholder="enter Lastname" ng-pattern="/^[a-zA-Z]+$/" ng-model="user.lstnm" required>
+           <span style="color: red" ng-if="frm.lstnm.$dirty && frm.lstnm.$error.pattern">Invalid Username</span>
+           <span style="color: red" ng-if="frm.lstnm.$dirty && frm.lstnm.$error.required">Don't Leave Empty</span>
+           </label>
+
+
+ 
+
+
+
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password"  placeholder="enter password" name="pswrd" ng-model="user.pswrd" ng-minlength='8' required>
+          <span ng-if="frm.pswrd.$dirty && frm.pswrd.$invalid"> 
+          <span style="color: red" ng-if="frm.pswrd.$error.required">Don't Leave Empty</span>
+          <span style="color: red" ng-if="frm.pswrd.$error.minlength">  password strength:weak </span>
+          </span>
+       </label>
+
+
+
+        <label class="item item-input">
+          <span class="input-label">Contact</span>
+          <input type="tel" id="con" placeholder="enter contact" name="cntct" ng-pattern="/^[0-9]+$/" ng-model="user.cntct" ng-minlength='10' ng-maxlength='13' minlength="10" maxlength="13" required>
+          <span ng-if="frm.cntct.$dirty && frm.cntct.$invalid">
+          <span style="color: red" ng-if=" frm.cntct.$error.minlength"> min. Length : 10</span>
+          <span style="color: red" ng-if=" frm.cntct.$error.maxlength"> max. length : 13</span>
+          <span style="color: red" ng-if=" frm.cntct.$error.required"> Don't Leave Empty</span>
+          <span style="color: red" ng-if="frm.cntct.$dirty && frm.cntct.$error.pattern"> Invalid contact</span>
+          </span>
+
+        </label>
+
+
+       <label class="item item-input">
+          <span class="input-label">E-Mail</span>
+          <input type="email" id="em" placeholder="enter E-Mail" name='email' ng-model="user.email" ng-pattern="/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/"required>
+          <span  ng-if="frm.email.$dirty && frm.email.$invalid">
+        <span style="color: red" ng-if="frm.email.$error.required"> Don't Leave Empty</span>
+        <span style="color: red" ng-if="frm.email.$error.email">    Invalid Email</span>
+      </span>
+        </label>
+
+
+        <label class="item item-input">
+          <span class="input-label">Address</span>
+           <input type="text" id="address_employee"  autocomplete="off" placeholder="Address Here..." ng-model="user.address" required data-tap-disabled="true" disable-tap="disable-tap" ng-change='disableTap()'>
+           <span style="color: red" ng-if="frm.address.$dirty && frm.address.$error.required">Enter Valid Address</span>
+        </label>
+
+
+        
+        <label class="item item-input">
+           <span class="input-label">Country</span>
+           <select name="selectedCountry"  id="cntry" ng-model="user.selectedCountry" ng-options="country.name for country in countries track by country.name" ng-change="stateOption()" required><option value="">Select country</option></select>  
+        </label>
+
+
+        <label class="item item-input">
+           <span class="input-label">State</span>
+           <select name="selectedState"  id="stt" ng-disabled="!user.selectedCountry" ng-model="user.selectedState" ng-options="state.name for state in (states | filter:{country : { code :user.selectedCountry.code}}) track by state.name" required><option value="" required>Select state</option></select>
+        </label>
+
+        <label class="item">
+          <button ion-button class="button button-block button-positive" ng-disabled="!user.frstnm || !user.address || !user.selectedCountry"  ng-click="sbmtfun()" type="submit" >Sign Up</button>
+        </label>
+
+        <label class="item">
+          <button ion-button class="button button-block button-positive" ng-disabled="!user.frstnm || !user.address || !user.selectedCountry"  ng-click="openModal(user)" type="submit" >Ionic Modal View</button>
+        </label>
+     
+       
+     </div>
+     
+<!-- <div class="modal">
+    <h1>{{ $scope.use }}</h1>
+</div> -->
+
+
+    </form>
+ </ion-content>
+  </ion-view>

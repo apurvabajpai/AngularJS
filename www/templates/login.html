@@ -1,0 +1,44 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doLogin()" name="frm">
+      <div class="list">
+        
+
+ 
+          <label class="item item-input">
+          <span class="input-label">Username </span>
+          <input type="text" name="username" id="fnm" placeholder="enter Username" ng-pattern="/^[a-zA-Z]+$/" ng-model="loginData.username" required>
+           <span style="color: red" ng-if="frm.username.$dirty && frm.username.$error.pattern">     Invalid Username</span>
+           <span style="color: red" ng-if="frm.username.$dirty && frm.username.$error.required">     Don't Leave Empty</span>
+           </label>
+
+
+
+
+           <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password"  placeholder="enter password" name="pswrd" ng-model="loginData.pswrd" ng-minlength='8' required>
+          <span ng-if="frm.pswrd.$dirty && frm.pswrd.$invalid"> 
+          <span style="color: red" ng-if="frm.pswrd.$error.required">  Don't Leave Empty</span>
+          <span style="color: red" ng-if="frm.pswrd.$error.minlength"> </span>
+       </label>
+
+
+
+        
+        <label class="item">
+          <button class="button button-block button-positive" ng-click="login()" type="submit">Log in</button>
+        </label>
+
+
+
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

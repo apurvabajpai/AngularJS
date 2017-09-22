@@ -1,0 +1,22 @@
+<ion-view><ion-nav-buttons side="right">
+<button class="button button-calm icon ion-power button-clear headerbtn" ng-click="go()">
+    </button>
+</ion-nav-buttons>
+
+
+<ion-content class="padding">
+    <ion-list>
+        
+        <ion-checkbox collection-repeat="list in _list" ng-click="selectedData(list)"class="item-thumbnail-left">
+            
+            <img ng-src="{{list.img}}">
+            <p>{{list.id}}</p>
+            <p>{{list.firstName}}</p>
+            <p>{{list.lastName}}</p>
+        
+        </ion-checkbox>
+    </ion-list>
+    <ion-infinite-scroll ng-if="canWeLoadMoreContent()" on-infinite="populateList()" distance="1%">
+    </ion-infinite-scroll>
+</ion-content>
+</ion-view>

@@ -1,0 +1,25 @@
+
+<<ion-view view-title="listdata">
+<ion-content align="center">
+<div class="lstdata">
+
+ <label class="item item-input">
+	<span class="input-label">Search</span>
+
+	 <input type="text" ng-model="letter" placeholder="Enter a letter to filter" />
+	 </label>
+       
+       <div>
+		<ul ng-repeat="x in arr | startsWithLetter:letter">
+	<li><a href="#/app/listdata/{{x}}" ng-click="details(x)" class="fname">{{x.frstnm}}</a></li>
+	</ul>
+	<div ng-show="!(arr| startsWithLetter:letter).length">No Results Found</div>
+</div>
+	
+</div>
+
+<button class = "button" ng-click = "openBrowser()">OPEN BROWSER</button>
+
+</div>
+</ion-content>
+</ion-view>
